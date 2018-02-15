@@ -1,0 +1,30 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Home page
+@import 'home';
+
+.navbar-laravel {
+  background-color: $white;
+  border-bottom: 1px solid $custom !important;
+
+  .navbar-brand {
+    font-size: 1.25rem !important;
+  }
+}
+
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+textarea {
+  outline: none;
+  box-shadow:none !important;
+}

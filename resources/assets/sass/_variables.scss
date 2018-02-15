@@ -1,0 +1,23 @@
+
+// Body
+$body-bg: #fff; // finding a place for you 
+$custom: #c0c0c8;
+
+$theme-colors: (
+  "primary": #1fbad6
+);
+
+// Typography
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+$text-color: #636b6f;  // #09091a;
+
+// Navbar
+$navbar-default-bg: $body-bg;
+
+// Buttons
+// $btn-default-color: $text-color;
+
+// Panels
+$panel-default-heading-bg: $body-bg;
