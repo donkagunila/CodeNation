@@ -15,7 +15,7 @@
     </head>
     <body>
         <div id="app">
-            <nav class="navbar navbar-expand-md navbar-light">
+            <nav class="navbar navbar-expand-md navbar-light mb-5">
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <img src="{{url('/images/brand/bootstrap-solid.svg')}}" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -29,20 +29,41 @@
                     <div class="collapse navbar-collapse " id="CodeNation">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mx-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/') }}">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Hire Freelancers
+                                </a>
+                                <div class="dropdown-menu mr-4" aria-labelledby="navbarDropdown">
+                                    <p class="dropdown-item mb-0 text-uppercase font-weight-bold">Find Freelancers</p>
+                                    <a class="dropdown-item" href="{{ url('/post/project') }}">Post A Project</a>
+                                    <a class="dropdown-item" href="{{ url('/post/contest') }}">Post A Contest</a>
+                                    <a class="dropdown-item" href="{{ url('/post/local-job') }}">Post A Local Job</a>
+                                    <div class="dropdown-divider"></div>
+                                    <p class="dropdown-item mb-0 text-uppercase font-weight-bold">Discover</p>
+                                    <a class="dropdown-item" href="{{ url('/discover/showcase') }}">ShowCase</a>
+                                    <a class="dropdown-item" href="{{ url('/discover/directory') }}">Browse Directory</a>
+                                    <a class="dropdown-item" href="{{ url('/discover/community') }}">Community</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Find Work
+                                </a>
+                                <div class="dropdown-menu mr-4" aria-labelledby="navbarDropdown">
+                                    <p class="dropdown-item mb-0 text-uppercase font-weight-bold">Find Work</p>
+                                    <a class="dropdown-item" href="{{ url('/browse/project') }}">Browse Projects</a>
+                                    <a class="dropdown-item" href="{{ url('/browse/contest') }}">Browse Contest</a>
+                                    <a class="dropdown-item" href="{{ url('/browse/categories') }}">Browse Categories</a>
+                                </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Jobs</a>
+                                <a class="nav-link" href="{{ url('/how-it-works') }}">How it Works</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">How it Works</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
+                                <a class="nav-link" href="{{ url('/pricing') }}">Pricing</a>
                             </li>
                         </ul>
 
@@ -56,7 +77,8 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
                                         <span class="avatar avatar-online">
-                                        <img src="{{url('/images/bPd_2Ldo_400x400.jpg')}}" class="rounded-circle border d-inline-block align-top" alt="..." style="height: 30px" >
+                                        {{--  <img src="{{ url('/images/bPd_2Ldo_400x400.jpg') }}" class="rounded-circle border d-inline-block align-top" style="height: 30px" >  --}}
+                                        <img src="{{ Auth::user()->gravatar }}" class="rounded-circle border d-inline-block align-top" style="height: 30px" >
                                         <i></i>
                                         </span>
                                     </a>

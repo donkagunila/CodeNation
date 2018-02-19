@@ -104,6 +104,6 @@ class RegisterController extends Controller
 
     protected function registered(Request $request, $user) {
         $this->guard()->logout();
-        return redirect()->intended($this->redirectPath());
+        return redirect()->intended($this->redirectPath())->with('warning', 'You need to confirm your account. We have sent you an activation code, please check your e-mail');
     }
 }
